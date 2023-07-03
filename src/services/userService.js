@@ -3,4 +3,25 @@ const handleLoginUser = (email, password) => {
   return axios.post("/api-login", { email: email, password: password });
 };
 
-export { handleLoginUser };
+const handleGetAllUser = (id) => {
+  return axios.get(`/api/get-all-user?id=${id}`);
+};
+
+const handleDeleteUser = (id) => {
+  return axios.delete("/api/delete-user", { data: { id: id } });
+};
+
+const handleAddNewUser = (data) => {
+  return axios.post("/api/add-new-user", { data: data });
+};
+
+const handleEditUser = (data) => {
+  return axios.put("/api/edit-user", { data: data });
+};
+export {
+  handleLoginUser,
+  handleGetAllUser,
+  handleDeleteUser,
+  handleAddNewUser,
+  handleEditUser,
+};

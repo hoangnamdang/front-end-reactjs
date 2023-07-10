@@ -1,4 +1,8 @@
 {
+    "header": {
+     "specialist": "specialist",
+     "find-a-doctor-by-specialty": "Find a doctor by specialty"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

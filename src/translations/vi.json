@@ -1,4 +1,8 @@
 {
+    "header": {
+        "specialist": "Chuyên khoa",
+        "find-a-doctor-by-specialty": "Find a doctor by specialty"
+       },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

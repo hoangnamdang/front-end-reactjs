@@ -16,6 +16,7 @@ import Home from "../routes/Home";
 import System from "../routes/System";
 import Login from "./Auth/Login";
 import Header from "./Header/Header";
+import HomePage from "./HomePage/HomePage";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
@@ -58,6 +59,7 @@ class App extends Component {
                   path={path.SYSTEM}
                   component={userIsAuthenticated(System)}
                 />
+                <Route path={path.HOME_PAGE} component={HomePage} />
               </Switch>
             </span>
 

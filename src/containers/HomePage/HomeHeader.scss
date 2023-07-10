@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home-header-container {
+  height: 60px;
+  width: 1170px;
+  margin: 0 auto;
+
+  .home-header-content {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+
+    .left-content {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .home-icon-memu {
+        font-size: 25px;
+        margin-right: 10px;
+        color: #969495;
+      }
+      .header-logo {
+        background: url("../../assets/images/logo.svg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40px;
+      }
+    }
+
+    .center-content {
+      width: 60%;
+      ul.home-list-menu {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li.home-item-menu {
+          h6.title-menu {
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+          }
+          p.title-description {
+            font-size: 10px;
+            font-weight: 300;
+            color: #444;
+          }
+          a.home-item-link {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .right-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      .title-support {
+        // display: flex;
+        margin-bottom: 0;
+        font-weight: bold;
+        color: #969495;
+        font-size: 16px;
+        i.icon-question {
+          color: aqua;
+        }
+      }
+      .phone {
+        color: aqua;
+      }
+      .home-change-language {
+        margin-left: 10px;
+        font-size: 16px;
+        .flag-vi {
+          margin-right: 10px;
+          &.active {
+            color: red;
+          }
+        }
+        .flag-en {
+          &.active {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-header-banner {
+  background-image: url("../../assets/images/bookingcare-cover-4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  .home-background-banner {
+    padding: 45px 0;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(255, 255, 255, 0.1)
+    );
+  }
+
+  .title-home-banner {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 2px #444;
+    .title-banner-small {
+      font-size: 40px;
+      font-weight: 300;
+    }
+    .title-banner-big {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+  .input-filter-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    .block-input {
+      position: relative;
+      i {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        font-size: 20px;
+        color: #444;
+      }
+      .input-filter {
+        font-size: 20px;
+        padding: 10px 40px;
+        background-color: yellow;
+        border: none;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  ul.home-list-selection {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+    li.home-item-selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        .title-selection {
+          color: aqua;
+        }
+      }
+      .home-link-selection {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .block-selection {
+        text-align: center;
+        i {
+          font-size: 30px;
+          color: aqua;
+        }
+      }
+    }
+  }
+}

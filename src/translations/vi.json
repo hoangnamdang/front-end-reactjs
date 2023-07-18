@@ -2,7 +2,10 @@
     "header": {
         "specialist": "Chuyên khoa",
         "find-a-doctor-by-specialty": "Find a doctor by specialty"
-       },
+    },
+    "special": {
+        "title": "Chuyên khoa phổ biến"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

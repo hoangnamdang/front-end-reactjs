@@ -20,6 +20,7 @@ import HomePage from "./HomePage/HomePage";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
+import "./App.scss";
 
 class App extends Component {
   handlePersistorState = () => {

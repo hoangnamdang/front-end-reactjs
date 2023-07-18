@@ -1,7 +1,10 @@
 {
     "header": {
-     "specialist": "specialist",
-     "find-a-doctor-by-specialty": "Find a doctor by specialty"
+        "specialist": "specialist",
+        "find-a-doctor-by-specialty": "Find a doctor by specialty"
+    },
+    "special": {
+        "title": "Chuyên khoa phổ biến"
     },
     "common": {
         "add": "Add",

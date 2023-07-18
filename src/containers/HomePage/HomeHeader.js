@@ -2,12 +2,20 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
 import { FormattedMessage } from "react-intl";
+import { changeLanguage } from "../../store/actions/appActions";
+import { languages } from "../../utils/constant";
 class HomeHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+
+  handleChangeLanguage = (language) => {
+    this.props.handlechangeLanguage(language);
+  };
   render() {
+    const { lang } = this.props;
+    console.log(this.props);
     return (
       <React.Fragment>
         <div className="home-header-container">
@@ -62,13 +70,19 @@ class HomeHeader extends Component {
                   <i class="icon-question fa-regular fa-circle-question"></i>Hỗ
                   trợ
                 </p>
-                <p className="phone">09876-09777</p>
               </div>
               <div className="home-change-language">
-                <span className="flag-vi">
+                {console.log(lang === "vi")}
+                <span
+                  onClick={() => this.handleChangeLanguage(languages.VI)}
+                  className={`flag-vi ${lang === "vi" ? "active" : ""} `}
+                >
                   VI <i class="fa-solid fa-flag"></i>
                 </span>
-                <span className="flag-en">
+                <span
+                  onClick={() => this.handleChangeLanguage(languages.EN)}
+                  className={`flag-en ${lang === "en" ? "active" : ""} `}
+                >
                   EN <i class="fa-regular fa-flag"></i>
                 </span>
               </div>
@@ -138,9 +152,13 @@ class HomeHeader extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    // lang: state.app.language,
+    lang: state.app.language,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handlechangeLanguage: (language) => dispatch(changeLanguage(language)),
+  };
+};
 export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);

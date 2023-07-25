@@ -75,12 +75,14 @@
         margin-left: 10px;
         font-size: 16px;
         .flag-vi {
+          cursor: pointer;
           margin-right: 10px;
           &.active {
             color: red;
           }
         }
         .flag-en {
+          cursor: pointer;
           &.active {
             color: blue;
           }

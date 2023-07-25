@@ -15,7 +15,6 @@ import { path } from "../utils";
 import Home from "../routes/Home";
 import System from "../routes/System";
 import Login from "./Auth/Login";
-import Header from "./Header/Header";
 import HomePage from "./HomePage/HomePage";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
@@ -47,7 +46,6 @@ class App extends Component {
         <Router history={history}>
           <div className="main-container">
             <ConfirmModal />
-            {this.props.isLoggedIn && <Header />}
 
             <span className="content-container">
               <Switch>
@@ -86,7 +84,6 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     started: state.app.started,
-    isLoggedIn: state.user.isLoggedIn,
     // isLoggedIn: state.admin.isLoggedIn,
   };
 };

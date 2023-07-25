@@ -72,7 +72,6 @@ class HomeHeader extends Component {
                 </p>
               </div>
               <div className="home-change-language">
-                {console.log(lang === "vi")}
                 <span
                   onClick={() => this.handleChangeLanguage(languages.VI)}
                   className={`flag-vi ${lang === "vi" ? "active" : ""} `}

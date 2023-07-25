@@ -18,10 +18,15 @@ const handleAddNewUser = (data) => {
 const handleEditUser = (data) => {
   return axios.put("/api/edit-user", { data: data });
 };
+
+const handleGetDataAllCodeByType = (type) => {
+  return axios.get(`/allcode/?type=${type}`);
+};
 export {
   handleLoginUser,
   handleGetAllUser,
   handleDeleteUser,
   handleAddNewUser,
   handleEditUser,
+  handleGetDataAllCodeByType,
 };

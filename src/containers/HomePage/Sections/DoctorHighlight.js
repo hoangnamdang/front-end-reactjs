@@ -4,7 +4,7 @@ import "./DoctorHighlight.scss";
 import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 import bg from "../../../assets/images/092249-doctor-check.jpg";
-
+import { getDoctorHightligh } from "../../../services/doctorService";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -29,14 +29,23 @@ function SamplePrevArrow(props) {
 class DoctorHighlight extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      listDoctor: [],
+    };
   }
 
   handleChangeLanguage = (language) => {
     this.props.handlechangeLanguage(language);
   };
 
+  componentDidMount = async () => {
+    const response = await getDoctorHightligh();
+    if (response.errCode === 0) {
+      this.setState({ listDoctor: response.listDoctor });
+    }
+  };
   render() {
+    const { listDoctor } = this.state;
     const settings = {
       dots: true,
       infinite: true,

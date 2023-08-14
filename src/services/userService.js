@@ -22,6 +22,9 @@ const handleEditUser = (data) => {
 const handleGetDataAllCodeByType = (type) => {
   return axios.get(`/allcode/?type=${type}`);
 };
+const saveDataUser = (dataUser) => {
+  return axios.post("/api/add-new-user", dataUser);
+};
 export {
   handleLoginUser,
   handleGetAllUser,
@@ -29,4 +32,5 @@ export {
   handleAddNewUser,
   handleEditUser,
   handleGetDataAllCodeByType,
+  saveDataUser,
 };

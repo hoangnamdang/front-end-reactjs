@@ -12,3 +12,8 @@ export const userLoginSuccess = (userInfo) => ({
 export const userLogout = () => ({
   type: actionTypes.USER_LOGOUT,
 });
+
+export const userGetGenders = (payload) => ({
+  type: actionTypes.USER_GET_GENDER,
+  payload: payload,
+});

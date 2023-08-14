@@ -13,6 +13,7 @@ const actionTypes = Object.freeze({
   ADD_USER_SUCCESS: "ADD_USER_SUCCESS",
   USER_LOGIN_SUCCESS: "USER_LOGIN_SUCCESS",
   USER_LOGOUT: "USER_LOGOUT",
+  USER_GET_GENDER: "USER_GET_GENDER",
 });
 
 export default actionTypes;

@@ -3,10 +3,10 @@ import actionTypes from "../actions/actionTypes";
 const initialState = {
   isLoggedIn: false,
   userInfo: null,
+  genders: [],
 };
 
 const appReducer = (state = initialState, action) => {
-  console.log({ action });
   switch (action.type) {
     case actionTypes.USER_LOGIN_SUCCESS:
       return {
@@ -19,6 +19,11 @@ const appReducer = (state = initialState, action) => {
         ...state,
         isLoggedIn: false,
         userInfo: null,
+      };
+    case actionTypes.USER_GET_GENDER:
+      return {
+        ...state,
+        genders: action.payload,
       };
     default:
       return state;
